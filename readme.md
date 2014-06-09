@@ -1,6 +1,6 @@
 # FEM ("Free" Element Modifier)
 
-##  The Free People UX Team CSS Naming Conventions
+##  Free People CSS Naming Conventions
 
 ### Markup
     <form class="search-form">
