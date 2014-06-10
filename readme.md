@@ -1,4 +1,4 @@
-# FEM ("Free" Element Modifier)
+# FEM ("Free" Element Modifier States)
 
 ##  Free People CSS Naming Conventions
 
@@ -6,7 +6,7 @@
     <form class="search-form">
         <fieldset>
             <label>Search:</label>
-            <input type="search" class="search-form--input is-clicked" />
+            <input type="search" class="search-form--input search-form--input-small is-clicked" />
         </fieldset>
     </form>
 
@@ -16,7 +16,9 @@
 
 2. **Child Class Names**: use two dashes to identify children of parent element, ie, *.search-form--input*
 
-3. **Modifiers:** use train case for modifiers; the first word should be a verb, ie, *.search-form--input.is-clicked*
+3. **Modifiers**: .search-form-small modify it with a hyphen after parent class name or child, ie,  *.search-form--input-small*
+
+4. **States**: use train case for states; the first word should be a verb, ie, *.search-form--input.is-clicked*
 
 ### SASS
     // parent element
@@ -30,7 +32,17 @@
       background: #fff;
       padding: 3px;
       border: solid 1px #ccc;
+      font: {
+        size: 13px;
+        text-transform: none;
+      }
       // modifier for child element .search-form--input
+      .search-form--input-small {
+        font: {
+          size: 10px;
+          text-transform: uppercase;
+        }
+      // state for child element .search-form--input
       &.is-clicked {
         border: solid 1px #ff0000;
       }
